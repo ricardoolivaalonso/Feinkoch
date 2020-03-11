@@ -1,0 +1,56 @@
+.header{
+    &-container{
+        @include flex(flex, space-between, center, row, wrap);
+        width: 100%;
+        @media(min-width: $mq2){
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+    }
+    &__logo{
+        object-fit: contain;
+        width: 90px;
+        opacity: 1;
+        transition: $transition .15s;
+        @media(min-width: $mq1){ width: 120px; }
+    }
+    &__menu{ @include flex(flex, center, center, row, nowrap); }
+    &__txt{
+        font-size: 20px;
+        line-height: 23px;
+    }
+    &__search{
+        @include flex(flex, flex-end, center, row-reverse, nowrap);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        padding: 0;
+        background-color: $white;
+        border-top: 1px solid $gray;
+        z-index: 2000;
+
+        @media(min-width: $mq1){
+            height: 82px;
+            padding: 2px $gap-h;
+         }
+        @media(min-width: $mq2){
+            flex-direction: row;
+            position: relative;
+            margin-top: $gap;
+            padding: 0;
+            border-bottom: 1px solid $gray;
+        }
+    }
+    &__input{
+        width: calc(100% - 50px);
+        height: 56px;
+        font-size: 24px;
+        padding: 2px $gap;
+        border: none;
+        outline: none;
+        color: lighten($black, 40);
+        &::placeholder{ color: lighten($black, 40); }
+    }
+}

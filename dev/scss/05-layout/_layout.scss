@@ -1,0 +1,88 @@
+.main{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: $gap;
+    transition: $transition;
+    background-color: $white;
+    z-index: 2000;
+
+    @media(min-width: $mq1){
+        height: 120px;
+        padding: $gap-v $gap-h;
+    }
+    @media(min-width: $mq2){
+        height: 207px;
+        padding: $gap-v $gap-h 0;
+    }
+}
+.banner{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    margin-top: 80px;
+    background-color: $gray-b;
+
+    @media(min-width: $mq1){ margin-top: 120px; }
+    @media(min-width: $mq2){
+        @include flex(flex, center, center, row-reverse, nowrap);
+        margin-top: 207px;
+        height: 53vw;
+    }
+    @media(min-width: $mq3){ height: 50vw;}
+    @media(min-width: $mq4){ height: 45vw; }
+}
+.recipe{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    padding: $gap * 4 $gap;
+    border-bottom:  1px solid $gray;
+
+    @media(min-width: $mq1){ padding: $gap * 4 $gap-h; }
+}
+.news{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    position: relative;
+    padding: $gap * 4 $gap;
+    background-color: $gray-b;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: calc(100vw - 100px);
+        height: 100%;
+        background-color: $gray-b;
+        z-index: -1;
+    }
+
+    @media(min-width: $mq1){
+        @include flex(flex, flex-start, flex-start, row, nowrap);
+        padding: $gap * 4 $gap-h;
+    }
+    @media(min-width: $mq2){
+        justify-content: center;
+        padding: $gap * 6 $gap-h $gap * 4;
+    }
+}
+.newsletter{
+    @include flex(flex, center, center, column, wrap);
+    padding: $gap 0 0;
+    background-color: $white;
+
+    @media(min-width: $mq1){ padding: $gap-v $gap-h $gap-v * 4; }
+    @media(min-width: $mq2){ @include flex(flex, flex-start, stretch, row, wrap); }
+}
+.footer{
+    width: 100%;
+    padding: $gap * 3 $gap $gap * 4;
+    background-color: $gray-b;
+
+    @media(min-width: $mq1){ @include flex(flex, flex-start, flex-start, row, wrap); }
+    @media(min-width: $mq2){ padding: $gap-v $gap-h; }
+}

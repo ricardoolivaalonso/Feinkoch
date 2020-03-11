@@ -1,0 +1,14 @@
+.is-header-hidden{
+    @media(min-width: $mq2){
+        transform: translateY(-125px);
+        transition: $transition;
+    }
+}
+.is-logo-hidden{
+
+    @media(min-width: $mq2){
+        opacity: 0;
+        transform: scale(.8);
+        transition: $transition;
+    }
+}

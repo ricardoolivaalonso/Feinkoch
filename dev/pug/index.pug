@@ -1,0 +1,36 @@
+doctype html
+html(lang="es", dir="ltr")
+    head
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(charset="utf-8")     
+        meta(name="author", content="Ricardo Oliva Alonso")
+        meta(name="title", content="Ricardo Oliva Alonso | Desarrollador Web | Feinkoch. ")
+        meta(name="description", content="Hola soy desarrollador web y esta página esta basada en Feinkoch.")
+        meta(name="robots", content="index, follow")
+        title Ricardo Oliva Alonso | Desarrollador Web | Feinkoch.
+           
+        meta(name="theme-color", content="#f8f8f8")      
+        link(rel="stylesheet", href="css/styles.css")  
+        link(href="img/favicon.png", rel="shorcut icon", type="image/x-icon")
+        link(rel="stylesheet", href="css/fonts.css")  
+            
+
+
+    body
+        div.container
+            include header.pug
+            include banner.pug
+            main.main
+                include a-recipe.pug
+                include news.pug
+                include f-recipe.pug
+                include dessert.pug
+                include newsletter.pug
+            include footer.pug
+    
+        script( src="js/main.js", defer)
+    
+
+
+
+    

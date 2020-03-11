@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Thin-Web.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Korpus-A';
+    src: url('../fonts/KorpusGrotesk-A.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Korpus-B';
+    src: url('../fonts/KorpusGrotesk-A.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}

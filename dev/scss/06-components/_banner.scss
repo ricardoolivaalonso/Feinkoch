@@ -1,0 +1,47 @@
+.banner{
+    &__info{
+        @include flex(flex, center, center, column, wrap);
+        position: relative;
+        height: 46vmax;
+        padding: $gap;
+
+
+        @media(min-width: $mq2){
+            height: 100%;
+            width: 35%;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 10vw;
+                width: 2px;
+                background-color: rgba($black, .5);
+            }
+        }
+    }
+    &__title{ margin-top: $gap * 1.25; }
+    &__description{
+        margin: $gap * 1.25 0;
+        font-size: 20px;
+        line-height: 23px;
+
+        @media(min-width: $mq2){
+            max-width: 300px;
+            text-align: center;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 37vmax;
+        background-image: url("../img/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover ;
+        background-position: center;
+        @media(min-width: $mq1){ height: 60vw; }
+        @media(min-width: $mq2){
+            height: 100%;
+            width: 65%;
+        }
+    }
+
+}
