@@ -8,4 +8,4 @@
 - itcss
 - gulp
 
-Live: https://ricardoolivaalonso06.appspot.com
+Live: https://ricardoolivaalonso06.netlify.app/
